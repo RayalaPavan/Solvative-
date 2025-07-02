@@ -1,0 +1,15 @@
+#ubuntu base Image
+
+FROM ubuntu:24.04
+
+#Install Apache2 
+
+RUN apt-get update &&  
+    apt-get install -y apache2 &&
+
+#Copy index.html file into default directory path
+
+copy index.html /var/www/html/index.html
+
+EXPOSE 80 
+
